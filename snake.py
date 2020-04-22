@@ -65,8 +65,8 @@ game_over = False
 pygame.mixer.music.load('music.mp3')
 pygame.mixer.music.play(0)
 
-efeito = pygame.mixer.Sound('efeito.wav')
-batida = pygame.mixer.Sound('explosion.wav')
+efect = pygame.mixer.Sound('efeito.wav')
+crash = pygame.mixer.Sound('explosion.wav')
 
 while not game_over:
     level()
@@ -88,14 +88,14 @@ while not game_over:
 
     # detectar quando pega o ponto
     if collision(snake[0], apple_pos):
-        efeito.play(0)
+        efect.play(0)
         apple_pos = on_grid_random()
         snake.append((0, 0))
         score = score + 1
 
     # detectar colisões nas paredes
     if snake[0][0] == 600 or snake[0][1] == 600 or snake[0][0] < 0 or snake[0][1] < 0:
-        batida.play(0)
+        crash.play(0)
         print(f'Você marcou {score} pontos.')
         sleep(2)
         game_over = True
@@ -104,7 +104,7 @@ while not game_over:
     # detectar colisão com ela mesma
     for i in range(1, len(snake) - 1):
         if snake[0][0] == snake[i][0] and snake[0][1] == snake[i][1]:
-            batida.play(0)
+            crash.play(0)
             print(f'Você marcou {score} pontos.')
             sleep(2)
             game_over = True
