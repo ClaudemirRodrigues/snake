@@ -46,13 +46,13 @@ font = pygame.font.Font('freesansbold.ttf', 18)
 score = 0
 
 game_over = False
-pygame.mixer.music.load('/home/bill/Área de Trabalho/PycharmProjects/snake/intro.wav')
+pygame.mixer.music.load('intro.wav')
 pygame.mixer.music.play()
 
-red = pygame.mixer.Sound('/home/bill/Área de Trabalho/PycharmProjects/snake/efeito.wav')
-efeito = pygame.mixer.Sound('/home/bill/Área de Trabalho/PycharmProjects/snake/loop.wav')
-batida = pygame.mixer.Sound('/home/bill/Área de Trabalho/PycharmProjects/snake/explosion.wav')
-ponto = pygame.mixer.Sound('/home/bill/Área de Trabalho/PycharmProjects/snake/pegaponto.wav')
+red = pygame.mixer.Sound('efeito.wav')
+efeito = pygame.mixer.Sound('loop.wav')
+batida = pygame.mixer.Sound('explosion.wav')
+ponto = pygame.mixer.Sound('pegaponto.wav')
 
 speed = 5
 count = 0
